@@ -2,14 +2,15 @@ package pbdirect
 
 import cats.instances.option._
 import cats.instances.list._
-import org.scalatest.{Matchers, WordSpecLike}
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 
 /** Unit tests in which we round-trip objects through PBWriter and PBReader.
   * These tests can cover more complicated objects than those in PBWriterSpec
   * and PBReaderSpec.  However, if there is a bug in both the reader and
   * writer that causes them to create readable but invalid Protobuf data,
   * these tests will not catch it. */
-class PBRoundTripSpec extends WordSpecLike with Matchers {
+class PBRoundTripSpec extends AnyWordSpecLike with Matchers {
   "A round trip through PBWriter and PBReader" should {
     case class BooleanMessage(value: Boolean)
     case class IntMessage(value: Int)

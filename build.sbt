@@ -16,8 +16,8 @@ val pbdirect = crossProject(JSPlatform, JVMPlatform)
     crossScalaVersions := Seq("2.11.12", "2.12.8", "2.13.0"),
     libraryDependencies ++= Seq(
       "com.chuusai"       %%% "shapeless"  % "2.3.3",
-      "org.typelevel"     %%% "cats-core"  % "2.0.0-M4",
-      "org.scalatest"     %%% "scalatest"  % "3.0.8" % Test
+      "org.typelevel"     %%% "cats-core"  % "2.0.0",
+      "org.scalatest"     %%% "scalatest"  % "3.1.2" % Test
     ),
     resolvers += "Sonatype OSS Snapshots" at
     "https://oss.sonatype.org/content/repositories/releases",
@@ -25,13 +25,13 @@ val pbdirect = crossProject(JSPlatform, JVMPlatform)
   )
   .jvmSettings(
     libraryDependencies ++= Seq(
-      "com.google.protobuf" % "protobuf-java"   % "3.9.0"
+      "com.google.protobuf" % "protobuf-java"   % "3.9.2"
     )
   )
   .jsSettings(
     libraryDependencies ++= Seq(
-      "io.github.cquiroz"    %%% "scala-java-time"        % "2.0.0-RC3" % "test",
-      "com.thesamet.scalapb" %%% "protobuf-runtime-scala" % "0.8.2"
+      "io.github.cquiroz"    %%% "scala-java-time"        % "2.0.0" % "test",
+      "com.thesamet.scalapb" %%% "protobuf-runtime-scala" % "0.8.3"
     )
   )
 
